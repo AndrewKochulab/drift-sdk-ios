@@ -61,7 +61,7 @@ struct Embed: Mappable {
         orgId       = map["orgId"].validNotEmpty()
         embedId     = map["id"].validNotEmpty()
         inboxId     = map["configuration.inboxId"].validNotEmpty()
-        layerAppId  = map["configuration.layerAppId"].validNotEmpty()
+        layerAppId <- map["configuration.layerAppId"]//.validNotEmpty()
         clientId    = map["configuration.authClientId"].validNotEmpty()
         redirectUri = map["configuration.redirectUri"].validNotEmpty()
         
